@@ -61,4 +61,4 @@
 
 Complete the exercises on sqlteaching.com as well and add a screenshot of the final screen showing all exercises completed to your README.
 
-![Epic Screenshot](../epic.png "Epic Screenshot")
+![Epic Screenshot](epic.png "Epic Screenshot")
