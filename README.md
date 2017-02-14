@@ -42,9 +42,9 @@
 ##Adventure Mode
 
 1. What item was ordered most often? Grossed the most money?
-    * `SELECT items.title, COUNT(orders.quantity) AS total_quantity FROM orders INNER JOIN items ON items.id = orders.item_id GROUP BY item_id ORDER BY total_quantity DESC;`
-    * Gorgeous Granite Car|11
-    * `SELECT items.title, SUM(orders.quantity*items.price) AS total_quantity FROM orders INNER JOIN items ON items.id = orders.item_id GROUP BY item_id ORDER BY total_quantity DESC;`
+    * `SELECT items.title, SUM(orders.quantity) AS total_quantity FROM orders INNER JOIN items ON items.id = orders.item_id GROUP BY item_id ORDER BY total_quantity DESC;`
+    * Incredible Granite Car|72
+    * `SELECT items.title, items.price, SUM(orders.quantity*items.price) AS total_quantity FROM orders INNER JOIN items ON items.id = orders.item_id GROUP BY item_id ORDER BY total_quantity DESC;`
     * Incredible Granite Car|525240
 2. What user spent the most?
     * `SELECT users.first_name || " " || users.last_name AS name, SUM(orders.quantity*items.price) AS total_quantity FROM users INNER JOIN orders ON orders.user_id = users.id  INNER JOIN items ON items.id = orders.item_id GROUP BY user_id ORDER BY total_quantity DESC;`
